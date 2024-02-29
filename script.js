@@ -86,6 +86,11 @@ const save = () => {
     return;
   }
 
+  if (name.value.length < 6) {
+     alert("name is not valid");
+     return;
+  }
+
   if (age.value == "") {
     alert("age is required");
     return;
@@ -174,6 +179,13 @@ function update(index) {
     alert("name is required");
     return;
   }
+
+  
+  if (newName.value.length < 6) {
+    alert("name is not valid");
+    return;
+  }
+  
 
   if (newAge.value == "") {
     alert("age is required");
