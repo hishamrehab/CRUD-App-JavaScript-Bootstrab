@@ -168,6 +168,42 @@ function update(index) {
   let newAge = document.getElementById("newAge");
   let newEmail = document.getElementById("newEmail");
 
+
+  
+  if (newName.value == "") {
+    alert("name is required");
+    return;
+  }
+
+  if (newAge.value == "") {
+    alert("age is required");
+    return;
+  }
+
+  if (newAge.value < 18) {
+    alert("age is not valid");
+    return;
+  }
+
+  if (newAge.value > 30) {
+    alert("age is not valid");
+    return;
+  }
+
+  if (newEmail.value == "") {
+    alert("Email is required");
+    return;
+  }
+
+  if (!newEmail.value.includes("@")) {
+    alert("Email is not vaild");
+    return;
+  }
+
+
+
+
+
   details[index] = {
     name: newName.value,
     age: newAge.value,
